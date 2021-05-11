@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  background: rgb(22,22,141);
+  background: linear-gradient(0deg, rgba(22,22,141,1) 70%, rgba(0,5,255,1) 100%);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: 'Architects Daughter', cursive;  
+  font-weight: 300;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 18px;  
+}
+
+.avatar {
+  width: 100px;
+  border-radius: 50px;
+  border: 3px solid white;
+  box-shadow: 0 0 20px white;
+}
+
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around; /*só funciona com display flex*/
+  list-style: none;
+  margin: 20px 0;
+}
+
+.social img {
+  width: 33px;
+}
+
+.links-list {
+  list-style: none;
+}
+
+.links-list li {
+  background-color: white;
+  border-radius: 5px;  
+  box-shadow: 0 0 20px white;
+  padding: 15px 20px;
+  margin: 10px 20px;    
+}
+
+.links-list li a {
+  text-decoration: none;
+  color: rgb(22,22,141);
+}
+
+.links-list li a span {
+  color: gray;
+  display: block;
+  margin-top: 10px; /* Esta margem só funciona com display block */  
+}
