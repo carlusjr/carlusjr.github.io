@@ -72,9 +72,18 @@ h5 {
 }
 
 .footer {
+  position: relative;
   background-color: black;
   color: white;
   margin-top: 40px;
   text-align: center;
   padding: 15px 0;
+}
+
+.footer a {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
 }
