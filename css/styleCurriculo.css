@@ -71,19 +71,17 @@ h5 {
   padding-left: 20px;
 }
 
-.footer {
-  position: relative;
+.footer {  
   background-color: black;
-  color: white;
-  margin-top: 40px;
-  text-align: center;
+  color: white;  
+  text-align: center;    
+  font-size: 16px;  
   padding: 15px 0;
 }
 
 .footer a {
+  display: block;
   color: white;
-  font-size: 14px;
-  position: absolute;
-  right: 20px;
-  bottom: 17px;
+  font-size: 14px;  
+  margin-top: 5px;
 }
