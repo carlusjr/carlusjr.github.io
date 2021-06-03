@@ -1,0 +1,80 @@
+body {
+  background-color: #dfdfdf;
+  color: #222222;
+  font-size: large;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500; 
+  margin: 0;
+}
+
+.container {  
+  max-width: 900px;
+  margin: 0 auto;  
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+a {
+  margin-top: 30px;
+}
+
+p {    
+  text-align: justify;  
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 2px;
+  margin-top: 10px;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  letter-spacing: -1px;
+}
+
+h2 {
+  margin-top: 2px;
+  margin-bottom: 2px;  
+  font-weight: 100;   
+}
+
+h4 {
+  margin-bottom: 5px;
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.foto {  
+  margin: 30px 30px 0;
+  border: 3px solid #ffffff; 
+  border-radius: 50px;
+  width: 200px;  
+  box-shadow: 1px 1px 10px black;
+}
+
+.social-links {
+  text-decoration: none;
+}
+.social-icons {
+  margin: 10px;  
+  width: 30px;
+}
+
+.jobs-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  margin-top: 40px;
+  text-align: center;
+  padding: 15px 0;
+}

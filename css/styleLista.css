@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700");
+
+:root {
+  --color-back-list: rgb(26, 26, 175);
+  --color-div-list: rgb(15, 15, 112);
+  --color-footer-list: rgb(14, 14, 105);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  
+  background-color: rgb(12, 12, 12);
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.todoList {
+  max-width: 700px;
+  width: 100%;
+}
+
+.todoList header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(107, 30, 179);
+  color: white;
+  padding: 15px;
+  font-size: 1.3em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;    
+}
+
+.todoList header a {
+  color: white;  
+  font-size: 0.8em;
+}
+
+.boxList .list {
+  list-style: none;  
+}
+
+.boxList .list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-back-list);
+  border-bottom: 2px solid var(--color-div-list);
+  color: #b1b2c9;
+  padding: 20px;
+  transition: background-color 200ms ease;
+}
+
+.boxList .list li:hover {
+  background-color: rgb(61, 61, 228);  
+}
+
+.boxList .list li:hover .remove {
+  opacity: 1;
+}
+
+.boxList .list .check {
+  margin-right: 20px;
+}
+
+.boxList .list .done .task {
+  text-decoration: line-through;
+}
+
+.boxList .list .task {
+  width: 600px;
+}
+
+.boxList .list button.remove {
+  background-color: red;  
+  color: white;
+  font-weight: bold;  
+  border-radius: 100%;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.boxList .list .removed {
+  animation: collapseItem 200ms ease;
+}
+
+.boxList .list .hidden {
+  display: none;
+}
+
+.todoList footer {
+  background-color: var(--color-footer-list);
+}
+
+.todoList footer input {
+  background-color: var(--color-footer-list);
+  border: none;
+  outline: none;
+  padding: 20px;
+  width: 90%;
+  color: white;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 1.1em;
+}
+
+@keyframes collapseItem {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(-90deg);
+  }  
+}
