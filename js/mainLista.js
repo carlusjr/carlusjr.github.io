@@ -13,6 +13,7 @@ const Main = {
     this.$inputTask = document.querySelector("#inputTask");
     this.$list = document.querySelector("#list");
     this.$removeButtons = document.querySelectorAll(".remove");
+    this.$btnOk = document.querySelector("#btnOk");
   },
 
   cacheTasks: function() {
@@ -24,6 +25,15 @@ const Main = {
     }
   },
 
+  addTask: function(task, index) {
+    // adiciona tarefa no HTML
+    this.addTaskHTML(task, index)
+    // adiciona tarefa no objeto JSON
+    this.tasksList.push({task: task, done: false});
+    // sava objeto JSON no local storage 
+    this.saveTasks();
+  },
+
   addTaskHTML: function(task, index, done) {
     const nomeCheckbox = "checkbox" + index;        
     const classDone = (done ? "done" : "");
@@ -31,7 +41,7 @@ const Main = {
     document.querySelector("#list").innerHTML += `
     <li class=${classDone}>
       <input type="checkbox" class="check" id="${nomeCheckbox}" ${checked}>          
-      <label for="${nomeCheckbox}" class="task">${task}</label>
+      <label for="${nomeCheckbox}" class="task">${task}</label>      
       <button class="remove">x</button>
     </li>`;        
   },
@@ -49,12 +59,14 @@ const Main = {
     this.$removeButtons.forEach( function(button) {
       button.onclick = self.Events.removeButton_click.bind(self);
     })
+
+    this.$btnOk.onclick = self.Events.inputTask_btnOkClick.bind(this);
   },
 
   saveTasks: function() {
     const taskJSON = JSON.stringify(this.tasksList);
     localStorage.setItem('tasks', taskJSON);
-  },
+  },  
 
   Events: {
     checkbox_click: function(e) {      
@@ -78,20 +90,22 @@ const Main = {
     inputTask_keypress: function(e) {
       const task = e.target.value;
       if (e.key === "Enter" && task) {
-        const index = this.$checkBoxes.length;        
-
-        // adiciona tarefa no HTML
-        this.addTaskHTML(task, index)
-        // adiciona tarefa no objeto JSON
-        this.tasksList.push({task: task, done: false});
-        // sava objeto JSON no local storage 
-        this.saveTasks();
-
+        const index = this.$checkBoxes.length;
+        this.addTask(task, index)
         e.target.value = "";
         this.cacheSelectors();
         this.bindEvents();
       }
       
+    },
+
+    inputTask_btnOkClick: function(e) {
+      const task = this.$inputTask.value;      
+      const index = this.$checkBoxes.length;
+      this.addTask(task, index)
+      this.$inputTask.value = "";
+      this.cacheSelectors();
+      this.bindEvents();
     },
 
     removeButton_click: function(e) {

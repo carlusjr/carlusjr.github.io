@@ -91,6 +91,21 @@ body {
   transition: opacity 200ms ease;
 }
 
+.buttonOk {
+  background-color: green;  
+  color: white;  
+  width: 50px;
+  font-weight: bold;    
+  cursor: pointer;    
+  padding: 5px;  
+}
+
+.buttonOk:hover {
+  background-color: rgb(3, 85, 3);    
+}
+
+
+
 .boxList .list .removed {
   animation: collapseItem 200ms ease;
 }
@@ -108,7 +123,7 @@ body {
   border: none;
   outline: none;
   padding: 20px;
-  width: 90%;
+  width: 85%;
   color: white;
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-size: 1.1em;
