@@ -56,13 +56,14 @@ const Main = {
   },
 
   addTaskHTML: function (id, task, done) {
-    const nomeCheckbox = "checkbox" + id;    
-    const classDone = done ? "done" : "none";
+    const nomeCheckbox = "checkbox" + id;
+    const idLabel = "label" + id;
+    const classDone = done ? "done" : "";
     const checked = done ? "checked" : "";
     document.querySelector("#list").innerHTML += `
-    <li class=${classDone} data-idtask=${id}>
+    <li data-idtask=${id}>
       <input type="checkbox" class="check" id="${nomeCheckbox}" ${checked}>          
-      <label class="task">${task}</label>      
+      <label id=${idLabel} class=${classDone}>${task}</label>      
       <button class="remove">x</button>
     </li>`;
   },
@@ -104,8 +105,10 @@ const Main = {
       this.saveTasks();
 
       // Muda classe da tarefa no HTML
-      if (isDone) $li.classList.add("done");
-      else $li.classList.remove("done");
+      const idLabel = "#label"+id;
+      const lblTask = document.querySelector(idLabel);
+      if (isDone) lblTask.classList.add("done");
+      else lblTask.classList.remove("done");
     },
 
     inputTask_keypress: function (e) {

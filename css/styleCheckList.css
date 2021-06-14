@@ -68,7 +68,7 @@ body {
   margin-right: 20px;
 }
 
-.boxList .list .task {
+.boxList .list label {
   width: 600px;
 }
 
