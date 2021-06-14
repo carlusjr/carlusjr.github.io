@@ -68,13 +68,14 @@ body {
   margin-right: 20px;
 }
 
-.boxList .list .done .task {
-  text-decoration: line-through;
-}
-
 .boxList .list .task {
   width: 600px;
 }
+
+.boxList .list .done {
+  text-decoration: line-through;
+}
+
 
 .boxList .list button.remove {
   background-color: red;  

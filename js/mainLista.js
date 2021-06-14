@@ -26,7 +26,7 @@ const Main = {
         });
         this.tasksList = newList;
         this.saveTasks();
-      }    
+      }
 
       this.tasksList.forEach((item) => {
         self.addTaskHTML(item.id, item.task, item.done);
@@ -41,22 +41,22 @@ const Main = {
         return { id: index, task: item.task, done: item.done };
       });
       this.tasksList = newList;
-    }    
+    }
     const newId = this.tasksList.length;
 
-    // adiciona tarefa 
-    this.tasksList.push({ id: newId, task: task, done: false });    
+    // adiciona tarefa
+    this.tasksList.push({ id: newId, task: task, done: false });
 
     // sava objeto JSON no local storage
     this.saveTasks();
 
-    // Remonta lista 
+    // Remonta lista
     this.$list.innerHTML = "";
     this.init();
   },
 
   addTaskHTML: function (id, task, done) {
-    const nomeCheckbox = "checkbox" + id;
+    const nomeCheckbox = "checkbox" + id;    
     const classDone = done ? "done" : "none";
     const checked = done ? "checked" : "";
     document.querySelector("#list").innerHTML += `
