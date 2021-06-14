@@ -100,12 +100,14 @@ const Main = {
     },
 
     inputTask_btnOkClick: function(e) {
-      const task = this.$inputTask.value;      
-      const index = this.$checkBoxes.length;
-      this.addTask(task, index)
-      this.$inputTask.value = "";
-      this.cacheSelectors();
-      this.bindEvents();
+      const task = this.$inputTask.value;    
+      if (task) {
+        const index = this.$checkBoxes.length;
+        this.addTask(task, index)
+        this.$inputTask.value = "";
+        this.cacheSelectors();
+        this.bindEvents();
+      }  
     },
 
     removeButton_click: function(e) {
