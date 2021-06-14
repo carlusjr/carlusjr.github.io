@@ -41,7 +41,7 @@ const Main = {
     document.querySelector("#list").innerHTML += `
     <li class=${classDone}>
       <input type="checkbox" class="check" id="${nomeCheckbox}" ${checked}>          
-      <label for="${nomeCheckbox}" class="task">${task}</label>      
+      <label class="task">${task}</label>      
       <button class="remove">x</button>
     </li>`;        
   },

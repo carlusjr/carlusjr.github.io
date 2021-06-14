@@ -9,14 +9,10 @@
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 0;  
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;  
   background-color: rgb(12, 12, 12);
   font-family: "Roboto Condensed", Arial, sans-serif;
@@ -25,7 +21,8 @@ body {
 
 .todoList {
   max-width: 700px;
-  width: 100%;
+  width: 100%;  
+  margin: 20px auto;
 }
 
 .todoList header {
@@ -120,7 +117,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;  
   background-color: var(--color-footer-list); 
 }
 
