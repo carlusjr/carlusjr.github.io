@@ -76,6 +76,11 @@ body {
   text-decoration: line-through;
 }
 
+.boxList .list .none {
+  text-decoration: none;
+}
+
+
 
 .boxList .list button.remove {
   background-color: red;  

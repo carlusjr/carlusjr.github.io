@@ -58,7 +58,7 @@ const Main = {
   addTaskHTML: function (id, task, done) {
     const nomeCheckbox = "checkbox" + id;
     const idLabel = "label" + id;
-    const classDone = done ? "done" : "";
+    const classDone = done ? "done" : "none";
     const checked = done ? "checked" : "";
     document.querySelector("#list").innerHTML += `
     <li data-idtask=${id}>
@@ -107,8 +107,13 @@ const Main = {
       // Muda classe da tarefa no HTML
       const idLabel = "#label"+id;
       const lblTask = document.querySelector(idLabel);
-      if (isDone) lblTask.classList.add("done");
-      else lblTask.classList.remove("done");
+      if (isDone) {
+        lblTask.classList.remove("none");
+        lblTask.classList.add("done");
+      } else {
+        lblTask.classList.remove("done");
+        lblTask.classList.add("none");
+      }
     },
 
     inputTask_keypress: function (e) {
