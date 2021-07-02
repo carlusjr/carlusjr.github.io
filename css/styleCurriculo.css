@@ -39,6 +39,11 @@ h2 {
   font-weight: 100;   
 }
 
+h3 {
+  margin: 10px 0px 2px 0px;
+  font-weight: 500;   
+}
+
 h4 {
   margin-bottom: 5px;
 }
@@ -58,12 +63,48 @@ h5 {
   box-shadow: 1px 1px 10px black;
 }
 
-.social-links {
+.contato {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contato-item {
+  display: flex;
+  flex-direction: row;
+  max-width: 250px;
+  margin: 0 35px;
+}
+
+
+.contato a {
+  margin-top: 14px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-item {
+  display: block;
+  max-width: 200px;
+}
+
+.link-icons {
   text-decoration: none;
 }
+
 .social-icons {
-  margin: 10px;  
+  margin: 10px 10px 0px 10px;  
   width: 30px;
+}
+
+.social-links {
+  text-decoration: underline;
+  font-size: 14px;
 }
 
 .jobs-list {
