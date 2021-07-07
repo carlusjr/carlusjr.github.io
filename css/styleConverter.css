@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700");
+
+:root {
+  --cor-logo1: rgb(9, 45, 73);
+  --cor-logo2: rgb(6, 158, 152);
+  --cor-moedas: rgb(18, 73, 116);
+  --cor-moedas-hover: rgb(14, 58, 92);
+  --cor-moedas-menu: rgb(222, 222, 222)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 700px;
+  min-width: 350px;  
+  width: 100%;  
+  margin: 20px auto;
+}
+
+.container header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  padding: 15px;
+  font-size: 1.3em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.container header a {
+  color: black;
+  font-size: 0.8em;
+  float: right;
+}
+
+.container footer {
+  text-align: center;
+  font-size: 16px;
+  padding: 15px 0;
+  color: white;
+}
+
+.container footer a {
+  color: white;
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(90deg, var(--cor-logo1) 30%, var(--cor-logo2) 100%);
+  font-size: 20px;
+}
+
+.calculadora .valores {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.calculadora .valores:hover .valores-titulo {
+  color: blue;
+}
+
+.calculadora .valores-titulo {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 16px;
+  color: black;
+}
+
+.calculadora .moeda {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-moedas);
+  margin: 10px 5px;
+  padding: 10px;
+  width: 40%;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.calculadora .moeda:hover {
+  background-color: var(--cor-moedas-hover);
+}
+
+.calculadora .taxas {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px;
+}
+
+.calculadora .taxas label {
+  margin: 20px;
+}
+
+.calculadora input {
+  padding-top: 15px;
+  padding-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 60%;
+  margin: 10px 0px 10px 10px;
+  font-size: 18px;
+  border: none;
+  text-align: right;
+}
+
+.calculadora input:focus {
+  outline-color: blue;
+}
+
+.calculadora .bandeira {
+  height: 30px;
+  padding: 5px;
+}
+
+.menu-moedas {
+  display: none;
+  background-color: var(--cor-moedas-menu);;
+  box-shadow: 2px 2px 10px black;  
+  color: black;
+  width: 230px; 
+  position: fixed; 
+  top: 20px; 
+  left: 20px;
+}
+
+.menu-moedas .menu-titulo {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.menu-moedas ul li  {
+  display: block;
+  padding: 10px;  
+  font-size: 16px;
+  list-style: none;  
+}
+
+.menu-moedas ul li:hover {
+  color: white;
+  background: var(--cor-moedas);
+}
+
+.menu-moedas img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.menu-moedas.exibir{
+  display: block;
+  animation: abrindo-menu 0.4s;
+}
+
+@keyframes abrindo-menu {
+  from {
+    opacity: 0;
+    transform: translate(0, -60px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }  
+}
